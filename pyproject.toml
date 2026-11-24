@@ -1,0 +1,32 @@
+[project]
+name = "drugsafety"
+version = "0.1.0"
+description = "Adverse drug event extraction with a LoRA fine-tuned small model, and a multi-agent drug safety review"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.4", "transformers>=4.46", "peft>=0.13", "accelerate>=0.34",
+  "datasets>=3.0", "scikit-learn>=1.4", "langgraph>=0.2", "requests>=2.31",
+]
+
+[project.optional-dependencies]
+gpu = ["bitsandbytes>=0.44"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B905"]

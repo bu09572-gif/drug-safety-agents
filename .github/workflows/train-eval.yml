@@ -1,0 +1,147 @@
+# Fine-tune with LoRA, compare against prompting and RAG, run the agent workflow, and commit the results.
+# Everything runs on free CPU runners. Start it from the Actions tab or by changing run-request.txt.
+name: train-eval
+
+on:
+  workflow_dispatch:
+    inputs:
+      smoke:
+        description: "Quick check on a few examples (results are not committed)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["run-request.txt"]
+
+permissions:
+  contents: write
+
+env:
+  PYTHONPATH: ${{ github.workspace }}/src
+  SMOKE: ${{ inputs.smoke && '1' || '' }}
+  HF_HUB_DISABLE_PROGRESS_BARS: "1"
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -e .
+      - uses: actions/cache@v4
+        with: { path: ~/.cache/huggingface, key: hf-qwen05-ade }
+      - name: Data stats
+        run: python -m drugsafety.splits
+      - name: LoRA fine-tuning on CPU
+        run: |
+          if [ -n "$SMOKE" ]; then ARGS="--limit 40"; else ARGS="--time-budget-min 270"; fi
+          python scripts/train.py --out adapters/qwen0.5b-ade $ARGS
+      - uses: actions/upload-artifact@v4
+        with: { name: adapter, path: adapters/qwen0.5b-ade }
+      - uses: actions/upload-artifact@v4
+        with: { name: data-stats, path: results/data_stats.json }
+
+  eval-base:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        method: [zero_shot, rag, rag_1_5b]
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -e .
+      - uses: actions/cache@v4
+        with: { path: ~/.cache/huggingface, key: hf-${{ matrix.method }}-ade }
+      - run: python scripts/run_eval.py --method ${{ matrix.method }} --shard ${{ matrix.shard }}/4 ${SMOKE:+--limit 16}
+      - uses: actions/upload-artifact@v4
+        with: { name: rows-${{ matrix.method }}-${{ matrix.shard }}, path: results/rows }
+
+  eval-finetuned:
+    needs: train
+    runs-on: ubuntu-latest
+    timeout-minutes: 200
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -e .
+      - uses: actions/cache@v4
+        with: { path: ~/.cache/huggingface, key: hf-qwen05-ade }
+      - uses: actions/download-artifact@v4
+        with: { name: adapter, path: adapters/qwen0.5b-ade }
+      - run: python scripts/run_eval.py --method finetuned --shard ${{ matrix.shard }}/4 ${SMOKE:+--limit 16}
+      - uses: actions/upload-artifact@v4
+        with: { name: rows-finetuned-${{ matrix.shard }}, path: results/rows }
+
+  agents:
+    needs: train
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu && pip install -e .
+      - uses: actions/cache@v4
+        with: { path: ~/.cache/huggingface, key: hf-agents-ade }
+      - uses: actions/download-artifact@v4
+        with: { name: adapter, path: adapters/qwen0.5b-ade }
+      - run: |
+          if [ -n "$SMOKE" ]; then ARGS="--drugs 2 --pairs 1 --max-sentences 5"; else ARGS=""; fi
+          python scripts/run_agents.py $ARGS
+      - uses: actions/upload-artifact@v4
+        with:
+          name: agents
+          path: |
+            results/agent_eval.json
+            results/sample_reports.md
+            results/graph.mmd
+            traces/
+            data/fda_labels/
+
+  merge:
+    needs: [eval-base, eval-finetuned, agents]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install scikit-learn
+      - uses: actions/download-artifact@v4
+        with: { pattern: rows-*, path: results/rows, merge-multiple: true }
+      - uses: actions/download-artifact@v4
+        with: { name: agents, path: . }
+        continue-on-error: true
+      - uses: actions/download-artifact@v4
+        with: { name: data-stats, path: results }
+      - uses: actions/download-artifact@v4
+        with: { name: adapter, path: adapters/qwen0.5b-ade }
+      - run: PYTHONPATH=src python scripts/merge_eval.py
+      - name: Training summary
+        run: |
+          cp adapters/qwen0.5b-ade/train_info.json results/train_info.json
+          cat results/train_info.json | head -30
+      - name: Publish adapter as a release and commit results
+        if: ${{ !inputs.smoke }}
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          tag="adapter-$(date -u +%Y%m%d-%H%M)"
+          tar czf qwen0.5b-ade-lora.tar.gz -C adapters qwen0.5b-ade
+          gh release create "$tag" qwen0.5b-ade-lora.tar.gz --title "LoRA adapter $tag" \
+            --notes "LoRA adapter for Qwen2.5-0.5B-Instruct, trained on ADE Corpus V2 (see results/train_info.json)."
+          git config user.name preethi
+          git config user.email bu09572-gif@users.noreply.github.com
+          git add results traces data/fda_labels
+          git commit -m "Training and evaluation results ($tag)" || exit 0
+          git pull --rebase && git push
