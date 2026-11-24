@@ -43,6 +43,7 @@ second = LocalChatModel(BASE_MODEL)
 graph = build_graph(planner, extractor, corpus, FDALabels(Path("data/fda_labels")), tracer,
                     retriever=ExampleRetriever(sp["train_pool"]), second_opinion_llm=second,
                     max_sentences=a.max_sentences)
+Path("results").mkdir(exist_ok=True)
 Path("results/graph.mmd").write_text(graph.get_graph().draw_mermaid())
 
 runs, per_drug, reports = [], [], []
