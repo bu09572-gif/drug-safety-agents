@@ -1,0 +1,90 @@
+{
+  "zero_shot": {
+    "n_sentences": 600,
+    "strict": {
+      "precision": 0.2694,
+      "recall": 0.3218,
+      "f1": 0.2933
+    },
+    "lenient": {
+      "precision": 0.425,
+      "recall": 0.5076,
+      "f1": 0.4626
+    },
+    "sentence_detection": {
+      "precision": 0.6194,
+      "recall": 0.8733,
+      "f1": 0.7248
+    },
+    "valid_json_rate": 0.7767,
+    "grounded_rate": 0.7722,
+    "median_seconds": 3.12,
+    "mean_prompt_tokens": 120.9
+  },
+  "rag": {
+    "n_sentences": 600,
+    "strict": {
+      "precision": 0.3102,
+      "recall": 0.4341,
+      "f1": 0.3618
+    },
+    "lenient": {
+      "precision": 0.4244,
+      "recall": 0.594,
+      "f1": 0.495
+    },
+    "sentence_detection": {
+      "precision": 0.6054,
+      "recall": 0.89,
+      "f1": 0.7206
+    },
+    "valid_json_rate": 0.765,
+    "grounded_rate": 0.7315,
+    "median_seconds": 3.572,
+    "mean_prompt_tokens": 298.0
+  },
+  "finetuned": {
+    "n_sentences": 600,
+    "strict": {
+      "precision": 0.6433,
+      "recall": 0.6933,
+      "f1": 0.6674
+    },
+    "lenient": {
+      "precision": 0.7315,
+      "recall": 0.7883,
+      "f1": 0.7588
+    },
+    "sentence_detection": {
+      "precision": 0.8746,
+      "recall": 0.93,
+      "f1": 0.9015
+    },
+    "valid_json_rate": 0.995,
+    "grounded_rate": 0.9579,
+    "median_seconds": 1.753,
+    "mean_prompt_tokens": 120.9
+  },
+  "rag_1_5b": {
+    "n_sentences": 600,
+    "strict": {
+      "precision": 0.3841,
+      "recall": 0.594,
+      "f1": 0.4665
+    },
+    "lenient": {
+      "precision": 0.4763,
+      "recall": 0.7365,
+      "f1": 0.5785
+    },
+    "sentence_detection": {
+      "precision": 0.6851,
+      "recall": 0.9067,
+      "f1": 0.7805
+    },
+    "valid_json_rate": 0.8017,
+    "grounded_rate": 0.7975,
+    "median_seconds": 13.356,
+    "mean_prompt_tokens": 298.0
+  }
+}

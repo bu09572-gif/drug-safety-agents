@@ -1,0 +1,27 @@
+{
+  "train_pool": {
+    "sentences": 16682,
+    "with_ade": 3423,
+    "pairs": 5322
+  },
+  "train": {
+    "sentences": 3000,
+    "with_ade": 2000,
+    "pairs": 3092
+  },
+  "val": {
+    "sentences": 200,
+    "with_ade": 100,
+    "pairs": 140
+  },
+  "test": {
+    "sentences": 600,
+    "with_ade": 300,
+    "pairs": 466
+  },
+  "test_all": {
+    "sentences": 3118,
+    "with_ade": 627,
+    "pairs": 967
+  }
+}

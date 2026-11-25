@@ -1,0 +1,4367 @@
+{
+  "questions": 20,
+  "drugs": [
+    "heparin",
+    "methotrexate",
+    "lithium",
+    "mtx",
+    "carbamazepine",
+    "ciprofloxacin",
+    "phenytoin",
+    "tamoxifen",
+    "l asparaginase",
+    "insulin",
+    "clozapine",
+    "infliximab",
+    "cisplatin",
+    "interferon alpha",
+    "gemcitabine"
+  ],
+  "planner_correct": 20,
+  "planner_valid_json": 20,
+  "labels_found": 12,
+  "extraction": {
+    "first_pass": {
+      "precision": 0.7346,
+      "recall": 0.8073,
+      "f1": 0.7692,
+      "tp": 155,
+      "pred": 211,
+      "gold": 192
+    },
+    "final": {
+      "precision": 0.77,
+      "recall": 0.8021,
+      "f1": 0.7857,
+      "tp": 154,
+      "pred": 200,
+      "gold": 192
+    }
+  },
+  "rejected_items": 11,
+  "questions_with_retry": 9,
+  "distinct_effects": 182,
+  "not_on_label": 76,
+  "median_seconds_per_question": 47.9,
+  "trace_events": 543,
+  "per_drug": [
+    {
+      "drug": "heparin",
+      "sentences": 21,
+      "gold_pairs": 16,
+      "first_pass": {
+        "tp": 14,
+        "pred": 20
+      },
+      "final": {
+        "tp": 13,
+        "pred": 18
+      }
+    },
+    {
+      "drug": "methotrexate",
+      "sentences": 31,
+      "gold_pairs": 17,
+      "first_pass": {
+        "tp": 15,
+        "pred": 23
+      },
+      "final": {
+        "tp": 15,
+        "pred": 21
+      }
+    },
+    {
+      "drug": "lithium",
+      "sentences": 20,
+      "gold_pairs": 17,
+      "first_pass": {
+        "tp": 12,
+        "pred": 17
+      },
+      "final": {
+        "tp": 12,
+        "pred": 17
+      }
+    },
+    {
+      "drug": "mtx",
+      "sentences": 13,
+      "gold_pairs": 14,
+      "first_pass": {
+        "tp": 13,
+        "pred": 15
+      },
+      "final": {
+        "tp": 13,
+        "pred": 15
+      }
+    },
+    {
+      "drug": "carbamazepine",
+      "sentences": 26,
+      "gold_pairs": 14,
+      "first_pass": {
+        "tp": 10,
+        "pred": 16
+      },
+      "final": {
+        "tp": 10,
+        "pred": 16
+      }
+    },
+    {
+      "drug": "ciprofloxacin",
+      "sentences": 11,
+      "gold_pairs": 13,
+      "first_pass": {
+        "tp": 11,
+        "pred": 14
+      },
+      "final": {
+        "tp": 11,
+        "pred": 14
+      }
+    },
+    {
+      "drug": "phenytoin",
+      "sentences": 10,
+      "gold_pairs": 13,
+      "first_pass": {
+        "tp": 7,
+        "pred": 14
+      },
+      "final": {
+        "tp": 7,
+        "pred": 9
+      }
+    },
+    {
+      "drug": "tamoxifen",
+      "sentences": 14,
+      "gold_pairs": 12,
+      "first_pass": {
+        "tp": 11,
+        "pred": 12
+      },
+      "final": {
+        "tp": 11,
+        "pred": 11
+      }
+    },
+    {
+      "drug": "l asparaginase",
+      "sentences": 10,
+      "gold_pairs": 11,
+      "first_pass": {
+        "tp": 9,
+        "pred": 9
+      },
+      "final": {
+        "tp": 9,
+        "pred": 9
+      }
+    },
+    {
+      "drug": "insulin",
+      "sentences": 19,
+      "gold_pairs": 11,
+      "first_pass": {
+        "tp": 5,
+        "pred": 6
+      },
+      "final": {
+        "tp": 5,
+        "pred": 6
+      }
+    },
+    {
+      "drug": "clozapine",
+      "sentences": 20,
+      "gold_pairs": 10,
+      "first_pass": {
+        "tp": 9,
+        "pred": 11
+      },
+      "final": {
+        "tp": 9,
+        "pred": 11
+      }
+    },
+    {
+      "drug": "infliximab",
+      "sentences": 12,
+      "gold_pairs": 10,
+      "first_pass": {
+        "tp": 6,
+        "pred": 11
+      },
+      "final": {
+        "tp": 6,
+        "pred": 10
+      }
+    },
+    {
+      "drug": "cisplatin",
+      "sentences": 16,
+      "gold_pairs": 9,
+      "first_pass": {
+        "tp": 8,
+        "pred": 15
+      },
+      "final": {
+        "tp": 8,
+        "pred": 15
+      }
+    },
+    {
+      "drug": "interferon alpha",
+      "sentences": 13,
+      "gold_pairs": 16,
+      "first_pass": {
+        "tp": 16,
+        "pred": 17
+      },
+      "final": {
+        "tp": 16,
+        "pred": 17
+      }
+    },
+    {
+      "drug": "gemcitabine",
+      "sentences": 10,
+      "gold_pairs": 9,
+      "first_pass": {
+        "tp": 9,
+        "pred": 11
+      },
+      "final": {
+        "tp": 9,
+        "pred": 11
+      }
+    }
+  ],
+  "runs": [
+    {
+      "id": "q0",
+      "question": "What adverse events are reported for heparin in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "heparin"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 1,
+      "seconds": 53.3,
+      "report": {
+        "heparin": {
+          "sentences_read": 21,
+          "label_found": true,
+          "label_set_id": "02fb700d-a28c-4d45-b78d-382dc0d5986c",
+          "effects": [
+            {
+              "effect": "thrombocytopenia",
+              "sentences": 5,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "00a50a76e33a",
+                  "text": "Heparin-dependent antibodies and thrombosis without heparin-induced thrombocytopenia."
+                },
+                {
+                  "id": "00a50a76e33a",
+                  "text": "Heparin-dependent antibodies and thrombosis without heparin-induced thrombocytopenia."
+                },
+                {
+                  "id": "4900441d550a",
+                  "text": "Warfarin-induced skin necrosis and heparin-induced thrombocytopenia following mitral valve replacement for marantic endocarditis."
+                }
+              ]
+            },
+            {
+              "effect": "hyperkalemia",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "5d2a80f0a52c",
+                  "text": "Our findings suggest that hyperkalemia can develop with the use of low-dose heparin, within seven days of initiating heparin therapy, and that patients with diabetes mellitus or chronic renal insufficiency are especially predisposed to this complication."
+                },
+                {
+                  "id": "91f91c6635c4",
+                  "text": "While most physicians are aware of heparin-induced thrombocytopenia and skin necrosis, the association of heparin and hyperkalemia is less well recognized."
+                }
+              ]
+            },
+            {
+              "effect": "Spontaneous hemothorax",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "1c1fb5661803",
+                  "text": "Spontaneous hemothorax following anticoagulation with low-molecular-weight heparin."
+                }
+              ]
+            },
+            {
+              "effect": "abnormal platelet aggregation",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "62c5ff9b2fa0",
+                  "text": "The association between heparin and priapism is often recognized; abnormal platelet aggregation could play a role in the pathogenesis of this side effect."
+                }
+              ]
+            },
+            {
+              "effect": "priapism",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "62c5ff9b2fa0",
+                  "text": "The association between heparin and priapism is often recognized; abnormal platelet aggregation could play a role in the pathogenesis of this side effect."
+                }
+              ]
+            },
+            {
+              "effect": "chest pain",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "a7894cc5fdc6",
+                  "text": "We describe two patients with Boerhaave's syndrome who presented with chest pain mimicking cardiac pain and received heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "cardiac pain",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "a7894cc5fdc6",
+                  "text": "We describe two patients with Boerhaave's syndrome who presented with chest pain mimicking cardiac pain and received heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "repeated venous thromboembolism",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "d1fd1c9a9cac",
+                  "text": "Despite these antithrombotic effects, the patient developed repeated venous thromboembolism during treatment with low-molecular-weight heparin."
+                }
+              ]
+            },
+            {
+              "effect": "thromboembolism",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "d9c23b0bba65",
+                  "text": "We describe a case of extensive thromboembolism associated with antithrombin (AT) deficiency complicated by thrombocytopenia which resolved when low-molecular-weight heparin was instituted."
+                }
+              ]
+            },
+            {
+              "effect": "HIT",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "dfa79d533d30",
+                  "text": "Most cardiac surgical patients have had previous exposure to heparin for diagnostic or therapeutic interventions and hence have an increased susceptibility to developing heparin-induced thrombocytopenia (HIT) postoperatively."
+                }
+              ]
+            },
+            {
+              "effect": "thrombosis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "e9b05a55f6a2",
+                  "text": "Heparin-associated thrombocytopenia and thrombosis is a severe complication of systemic heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "large intramural esophageal hematoma",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "ec2e7c350605",
+                  "text": "One patient developed large intramural esophageal hematoma as a complication of heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "clinical and microbiologic response",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f0164c5f74d8",
+                  "text": "A clinical and microbiologic response occurred when anticoagulation therapy with heparin was added to the treatment regimen."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "Spontaneous hemothorax",
+            "abnormal platelet aggregation",
+            "chest pain",
+            "cardiac pain",
+            "repeated venous thromboembolism",
+            "large intramural esophageal hematoma",
+            "clinical and microbiologic response"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q1",
+      "question": "What adverse events are reported for methotrexate in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "methotrexate"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 1,
+      "seconds": 57.2,
+      "report": {
+        "methotrexate": {
+          "sentences_read": 31,
+          "label_found": true,
+          "label_set_id": "04a95db9-a124-4b97-bd71-1c37a6b3b0c8",
+          "effects": [
+            {
+              "effect": "leukoencephalopathy",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "24624bf4d105",
+                  "text": "Methotrexate-induced leukoencephalopathy is treatable with high-dose folinic acid: a case report and analysis of the literature."
+                },
+                {
+                  "id": "31dfe509db3e",
+                  "text": "We present two children with acute lymphocytic leukemia who developed leukoencephalopathy following administration of a combination of intravenous ara = C and methotrexate during the consolidation phase of chemotherapy."
+                }
+              ]
+            },
+            {
+              "effect": "lymphoproliferative diseases",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "0207a64b84e1",
+                  "text": "The mild immunosuppression that occurs with methotrexate therapy probably places patients with rheumatoid arthritis at added risk of developing lymphoproliferative diseases, but coincidence cannot be excluded."
+                }
+              ]
+            },
+            {
+              "effect": "fibrosis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "liver damage",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "alter the elimination",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "2f47bd97af5b",
+                  "text": "Several drugs (e.g., penicillin, probenecid) can alter the elimination of methotrexate."
+                }
+              ]
+            },
+            {
+              "effect": "Renal failure",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "2fe6b3d1b332",
+                  "text": "Renal failure after high-dose methotrexate in a child homozygous for MTHFR C677T polymorphism."
+                }
+              ]
+            },
+            {
+              "effect": "systemic toxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "38611ca09fa2",
+                  "text": "We believe that methotrexate represents a relatively effective alternative to surgery in patients with early unruptured tubal pregnancy, but suggest that it be used with caution in view of possible systemic toxicity."
+                }
+              ]
+            },
+            {
+              "effect": "Toxic hepatitis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "526056f8f1dd",
+                  "text": "Toxic hepatitis due to combination therapy with methotrexate and etretinate in psoriasis."
+                }
+              ]
+            },
+            {
+              "effect": "Complications of tumour overkill",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "6615261c8cf6",
+                  "text": "Complications of tumour overkill when associated with high dose methotrexate therapy."
+                }
+              ]
+            },
+            {
+              "effect": "Lymphoma",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "876dc2d5d843",
+                  "text": "Lymphoma developing in a patient with rheumatoid arthritis taking methotrexate."
+                }
+              ]
+            },
+            {
+              "effect": "anaphylaxis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "9483db917421",
+                  "text": "Management and successful desensitization in methotrexate-induced anaphylaxis."
+                }
+              ]
+            },
+            {
+              "effect": "an iron deficiency anemia",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "960ab35e61fe",
+                  "text": "A 52 year-old male patient diagnosed of ankylosing spondylitis presented with an iron deficiency anemia after a ten-month treatment of methotrexate."
+                }
+              ]
+            },
+            {
+              "effect": "ascites",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "9902f08c45a2",
+                  "text": "Because of the presence of severe ascites and massive ovarian enlargement, it was elected to treat this patient with methotrexate therapy rather than surgery."
+                }
+              ]
+            },
+            {
+              "effect": "massive ovarian enlargement",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "9902f08c45a2",
+                  "text": "Because of the presence of severe ascites and massive ovarian enlargement, it was elected to treat this patient with methotrexate therapy rather than surgery."
+                }
+              ]
+            },
+            {
+              "effect": "diffuse papular eruption",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "c78dde78d683",
+                  "text": "OBJECTIVE: To report a case of a diffuse papular eruption following treatment of psoriasis with methotrexate injections."
+                }
+              ]
+            },
+            {
+              "effect": "nephropathy",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "c9131e6fc760",
+                  "text": "Methotrexate-associated nephropathy is a rare complication in pediatric oncology, and a review of the literature suggests that exposure to nephrotoxic agents may be a significant but perhaps underrecognized risk factor for its development."
+                }
+              ]
+            },
+            {
+              "effect": "serositis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "caf3d3081443",
+                  "text": "Methotrexate may rarely provoke serositis, even with low doses and after just a few weeks of therapy."
+                }
+              ]
+            },
+            {
+              "effect": "renal toxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "cba16af9f054",
+                  "text": "Early recognition of renal toxicity of high-dose methotrexate therapy: a case report."
+                }
+              ]
+            },
+            {
+              "effect": "severe toxicity",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f776fb4879ad",
+                  "text": "The authors report two cases of delayed elimination of methotrexate in patients receiving ciprofloxacin, with severe toxicity."
+                }
+              ]
+            },
+            {
+              "effect": "neurotoxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "fe39b5efee97",
+                  "text": "Clinicians should be aware of the signs and symptoms of neurotoxicity during treatment, as well as predisposing factors that put patients receiving methotrexate at risk for neurotoxic effects."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "liver damage",
+            "alter the elimination",
+            "Complications of tumour overkill",
+            "an iron deficiency anemia",
+            "massive ovarian enlargement",
+            "diffuse papular eruption",
+            "nephropathy",
+            "serositis",
+            "severe toxicity"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q2",
+      "question": "What adverse events are reported for lithium in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "lithium"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 41.4,
+      "report": {
+        "lithium": {
+          "sentences_read": 20,
+          "label_found": true,
+          "label_set_id": "01c4facd-ed79-4078-ba33-2044de372d0f",
+          "effects": [
+            {
+              "effect": "Creutzfeldt-Jakob syndrome",
+              "sentences": 2,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "1917a87279db",
+                  "text": "Lithium-induced Creutzfeldt-Jakob syndrome."
+                },
+                {
+                  "id": "8508a66bb4cb",
+                  "text": "Several cases of lithium-induced Creutzfeldt-Jakob syndrome have been reported to date; all of them were elderly patients and a half had \"therapeutic\" lithium serum levels."
+                }
+              ]
+            },
+            {
+              "effect": "polyuria",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "1fce3ded5e61",
+                  "text": "Clinicians have been aware of lithium toxicity for many years and traditionally have administered thiazide diuretics for lithium-induced polyuria and nephrogenic diabetes insipidus."
+                },
+                {
+                  "id": "dbad8f671e9e",
+                  "text": "Lithium therapy was discontinued because of poor compliance to the medication and intolerable polyuria."
+                }
+              ]
+            },
+            {
+              "effect": "seizure",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "0538ca32e099",
+                  "text": "The only possible seizure-provoking factors were modest doses of lithium and chlorpromazine, which the patient was on, and family history of seizure in a brother."
+                }
+              ]
+            },
+            {
+              "effect": "organic brain syndromes",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "2754c548167e",
+                  "text": "There have been many reports of probable lithium-induced organic brain syndromes occurring when serum lithium levels are within or close to the therapeutic range."
+                }
+              ]
+            },
+            {
+              "effect": "neuroleptic malignant syndrome",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "27c6997b153f",
+                  "text": "The authors describe a case of neuroleptic malignant syndrome that occurred in a patient on amitriptyline and lithium carbonate."
+                }
+              ]
+            },
+            {
+              "effect": "thyrotoxicosis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "27d311fe4c3d",
+                  "text": "The case of a bipolar patient who developed thyrotoxicosis with severe exophthalmos while on lithium therapy is described."
+                }
+              ]
+            },
+            {
+              "effect": "exophthalmos",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "27d311fe4c3d",
+                  "text": "The case of a bipolar patient who developed thyrotoxicosis with severe exophthalmos while on lithium therapy is described."
+                }
+              ]
+            },
+            {
+              "effect": "cognitive impairment",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "9f781144f00a",
+                  "text": "Serum lithium levels fell rapidly, but the cognitive impairment associated with the delirium typically persisted for another week or two."
+                }
+              ]
+            },
+            {
+              "effect": "delirium",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "9f781144f00a",
+                  "text": "Serum lithium levels fell rapidly, but the cognitive impairment associated with the delirium typically persisted for another week or two."
+                }
+              ]
+            },
+            {
+              "effect": "tremor",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "c438ef3e8077",
+                  "text": "Two patients with bipolar affective disorder and a history of bronchospastic phenomena experienced tremor during lithium carbonate therapy."
+                }
+              ]
+            },
+            {
+              "effect": "CDI",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "cbd14f4516ae",
+                  "text": "Potential mechanisms regarding the pathophysiology of lithium-associated CDI are discussed."
+                }
+              ]
+            },
+            {
+              "effect": "severe lithium-induced side effects",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f89581945bb9",
+                  "text": "Since recent studies have reported no negative interactions with concurrent use, we here report three cases (one case of a prolonged seizure, a serotonin syndrome and a focal seizure) of severe lithium-induced side effects while patients underwent ECT without complications and lithium serum levels were still subtherapeutic."
+                }
+              ]
+            },
+            {
+              "effect": "focal seizure",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "f89581945bb9",
+                  "text": "Since recent studies have reported no negative interactions with concurrent use, we here report three cases (one case of a prolonged seizure, a serotonin syndrome and a focal seizure) of severe lithium-induced side effects while patients underwent ECT without complications and lithium serum levels were still subtherapeutic."
+                }
+              ]
+            },
+            {
+              "effect": "serotonin syndrome",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "f89581945bb9",
+                  "text": "Since recent studies have reported no negative interactions with concurrent use, we here report three cases (one case of a prolonged seizure, a serotonin syndrome and a focal seizure) of severe lithium-induced side effects while patients underwent ECT without complications and lithium serum levels were still subtherapeutic."
+                }
+              ]
+            },
+            {
+              "effect": "Lithium toxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "f8be911e791d",
+                  "text": "Lithium toxicity in a neonate."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "Creutzfeldt-Jakob syndrome",
+            "thyrotoxicosis",
+            "exophthalmos",
+            "CDI",
+            "severe lithium-induced side effects"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q3",
+      "question": "What adverse events are reported for mtx in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "mtx"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 32.5,
+      "report": {
+        "mtx": {
+          "sentences_read": 13,
+          "label_found": false,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "Pneumonitis",
+              "sentences": 3,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "50a19cee9caf",
+                  "text": "Pneumonitis is emerging as one of the most unpredictable and potentially serious, adverse effects of treatment with MTX."
+                },
+                {
+                  "id": "b40095cf1232",
+                  "text": "Although risk factors for MTX-induced pulmonary toxicity are poorly understood, the presence in 3 out of 5 of our patients of pre-existing lung disease, represented by diffuse interstitial changes on chest X-ray, and mild bronchial asthma in two RA patients and by pulmonary silicosis in the patient with PsA may account for a predisposition to the development of MTX pneumonitis."
+                },
+                {
+                  "id": "cdfa4dee46cb",
+                  "text": "The presence of a lymphocyte alveolitis with a predominance of CD4+ T cells in 3 RA patients and CD8+ T cells with a concomitant increase in neutrophils in another case suggests that immunologically mediated reactions may be one damage mechanism in MTX-induced pneumonitis."
+                }
+              ]
+            },
+            {
+              "effect": "enhanced hematopoietic toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "04fca879cc2d",
+                  "text": "We hypothesize that decreased renal elimination of MTX induced by the COX-2 inhibitor resulted in enhanced hematopoietic toxicity and immunosuppression causing the EBV-associated lymphoproliferative disease."
+                }
+              ]
+            },
+            {
+              "effect": "immunosuppression",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "04fca879cc2d",
+                  "text": "We hypothesize that decreased renal elimination of MTX induced by the COX-2 inhibitor resulted in enhanced hematopoietic toxicity and immunosuppression causing the EBV-associated lymphoproliferative disease."
+                }
+              ]
+            },
+            {
+              "effect": "lymphoproliferative disease",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "04fca879cc2d",
+                  "text": "We hypothesize that decreased renal elimination of MTX induced by the COX-2 inhibitor resulted in enhanced hematopoietic toxicity and immunosuppression causing the EBV-associated lymphoproliferative disease."
+                }
+              ]
+            },
+            {
+              "effect": "fibrosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "liver damage",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "acute hypersensitivity reaction",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "138410e07be8",
+                  "text": "In the absence of mucositis or diarrhea, severe dermatologic toxicity following a single low dose of the drug suggests an 'allergic' or acute hypersensitivity reaction to MTX in this patient."
+                }
+              ]
+            },
+            {
+              "effect": "dermatologic toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "138410e07be8",
+                  "text": "In the absence of mucositis or diarrhea, severe dermatologic toxicity following a single low dose of the drug suggests an 'allergic' or acute hypersensitivity reaction to MTX in this patient."
+                }
+              ]
+            },
+            {
+              "effect": "severe dermatologic toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "138410e07be8",
+                  "text": "In the absence of mucositis or diarrhea, severe dermatologic toxicity following a single low dose of the drug suggests an 'allergic' or acute hypersensitivity reaction to MTX in this patient."
+                }
+              ]
+            },
+            {
+              "effect": "hepatic necrosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "ac6e08bb2a48",
+                  "text": "A 40-year-old man with a long standing history of rheumatoid arthritis was treated with MTX over a 6 month period and developed an overwhelming hepatic necrosis."
+                }
+              ]
+            },
+            {
+              "effect": "neurotoxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b07d1b30d797",
+                  "text": "We believe that this represents an unusual case of moderate-dose MTX-induced neurotoxicity in a patient with gastric cancer, which has not previously been reported."
+                }
+              ]
+            },
+            {
+              "effect": "pulmonary toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b40095cf1232",
+                  "text": "Although risk factors for MTX-induced pulmonary toxicity are poorly understood, the presence in 3 out of 5 of our patients of pre-existing lung disease, represented by diffuse interstitial changes on chest X-ray, and mild bronchial asthma in two RA patients and by pulmonary silicosis in the patient with PsA may account for a predisposition to the development of MTX pneumonitis."
+                }
+              ]
+            },
+            {
+              "effect": "lymphocyte alveolitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "cdfa4dee46cb",
+                  "text": "The presence of a lymphocyte alveolitis with a predominance of CD4+ T cells in 3 RA patients and CD8+ T cells with a concomitant increase in neutrophils in another case suggests that immunologically mediated reactions may be one damage mechanism in MTX-induced pneumonitis."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    },
+    {
+      "id": "q4",
+      "question": "What adverse events are reported for carbamazepine in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "carbamazepine"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 48.4,
+      "report": {
+        "carbamazepine": {
+          "sentences_read": 26,
+          "label_found": true,
+          "label_set_id": "047bc284-060a-4db9-bf37-75d10f95a0a6",
+          "effects": [
+            {
+              "effect": "hyponatremia",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "061a899494af",
+                  "text": "We discuss the association between carbamazepine and hyponatremia and the causes of hyponatremia after cardiopulmonary bypass."
+                }
+              ]
+            },
+            {
+              "effect": "massive overdose",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "0f48d15e4701",
+                  "text": "The authors report a woman who took a massive overdose (OD) of carbamazepine (CBZ)."
+                }
+              ]
+            },
+            {
+              "effect": "biochemical abnormality",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "13cfd31b2d0e",
+                  "text": "Although asymptomatic, the biochemical abnormality improved after discontinuation of carbamazepine."
+                }
+              ]
+            },
+            {
+              "effect": "hepatopathy",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "2055d7f48b8d",
+                  "text": "Four weeks earlier she had developed hepatopathy during a regimen of carbamazepine, lynestrenol and sodium valproate."
+                }
+              ]
+            },
+            {
+              "effect": "new complete right bundle branch block",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "3ecca8cc8389",
+                  "text": "A 53 year old Greenlandic male was admitted twice over a period of 4 years with a new complete right bundle branch block after ingestion of 10 g and 4 g of carbamazepine respectively."
+                }
+              ]
+            },
+            {
+              "effect": "Cutaneous rashes",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "490833e62432",
+                  "text": "Cutaneous rashes and eruptions can be caused by many medications, including carbamazepine."
+                }
+              ]
+            },
+            {
+              "effect": "eruptions",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "490833e62432",
+                  "text": "Cutaneous rashes and eruptions can be caused by many medications, including carbamazepine."
+                }
+              ]
+            },
+            {
+              "effect": "right bundle branch block",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "5d03dbf016b4",
+                  "text": "Carbamazepine induced right bundle branch block in a Greenlandic patient."
+                }
+              ]
+            },
+            {
+              "effect": "adverse event",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "812d4e62a8bf",
+                  "text": "Of note, the patient had been on carbamazepine therapy one year earlier and had experienced the same adverse event."
+                }
+              ]
+            },
+            {
+              "effect": "positive",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "94561e975f58",
+                  "text": "CASE REPORT: Two of our patients with history of ingestion of carbamazepine were tested positive on screening with the tricyclic antidepressant immunoassay."
+                }
+              ]
+            },
+            {
+              "effect": "carbamazepine toxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "a8e250d00f18",
+                  "text": "The present report suggests that clarithromycin coadministration induces increased plasma carbamazepine concentrations, which may result in carbamazepine toxicity."
+                }
+              ]
+            },
+            {
+              "effect": "Diabetes mellitus",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "ba0791518033",
+                  "text": "Carbamazepine-induced Diabetes mellitus."
+                }
+              ]
+            },
+            {
+              "effect": "systemic lupus erythematosus-like disease",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "ca8beb483dec",
+                  "text": "Carbamazepine-induced systemic lupus erythematosus-like disease."
+                }
+              ]
+            },
+            {
+              "effect": "became pregnant",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "cb70bfd3becd",
+                  "text": "Her carbamazepine concentration decreased from 11.8 to 8.5 micrograms/mL; she also became pregnant at that time."
+                }
+              ]
+            },
+            {
+              "effect": "systemic lupus erythematosus",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "e1769f83c07f",
+                  "text": "Carbamazepine-induced systemic lupus erythematosus."
+                }
+              ]
+            },
+            {
+              "effect": "Loss of seizure control",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f13c85cdf413",
+                  "text": "Loss of seizure control associated with generic substitution of carbamazepine."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "massive overdose",
+            "biochemical abnormality",
+            "new complete right bundle branch block",
+            "right bundle branch block",
+            "Diabetes mellitus",
+            "became pregnant",
+            "Loss of seizure control"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q5",
+      "question": "What adverse events are reported for ciprofloxacin in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "ciprofloxacin"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 37.7,
+      "report": {
+        "ciprofloxacin": {
+          "sentences_read": 11,
+          "label_found": true,
+          "label_set_id": "05b2836d-cd3d-4d7f-970c-66ec2d788667",
+          "effects": [
+            {
+              "effect": "Renal toxicities",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "12e6910b0d0b",
+                  "text": "Renal toxicities have been reported in less than one percent of the patients receiving ciprofloxacin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "Thrombocytosis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "2a9a2924114e",
+                  "text": "Thrombocytosis under ciprofloxacin and tazobactam/piperacillin."
+                }
+              ]
+            },
+            {
+              "effect": "epileptogenic property",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "354f33d8713a",
+                  "text": "In addition, there is a report on prolonged ECT seizure related to ciprofloxacin, which has an epileptogenic property with a similar action to beta-lactam antibiotics."
+                }
+              ]
+            },
+            {
+              "effect": "prolonged ECT seizure",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "354f33d8713a",
+                  "text": "In addition, there is a report on prolonged ECT seizure related to ciprofloxacin, which has an epileptogenic property with a similar action to beta-lactam antibiotics."
+                }
+              ]
+            },
+            {
+              "effect": "thrombocyte count",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "3fa3409adc3d",
+                  "text": "Since the thrombocyte count started to increase immediately after initiation and dropped immediately after discontinuation of ciprofloxacin and tazobactam/piperacillin and all other drugs were discontinued already before or were started after the nadir of the thrombocyte count, these two antibiotics were regarded causative."
+                }
+              ]
+            },
+            {
+              "effect": "Stevens-Johnson syndrome",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "45f126f64b91",
+                  "text": "Vanishing bile duct and Stevens-Johnson syndrome associated with ciprofloxacin treated with tacrolimus."
+                }
+              ]
+            },
+            {
+              "effect": "bile duct",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "45f126f64b91",
+                  "text": "Vanishing bile duct and Stevens-Johnson syndrome associated with ciprofloxacin treated with tacrolimus."
+                }
+              ]
+            },
+            {
+              "effect": "seizures",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "headache",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "dizziness",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "hallucinations",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "psychosis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "62a7a41b8ea0",
+                  "text": "CONCLUSIONS: Caution should be exercised when using ciprofloxacin in the treatment of patients with personality abnormalities or symptoms of psychosis."
+                }
+              ]
+            },
+            {
+              "effect": "personality abnormalities",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "62a7a41b8ea0",
+                  "text": "CONCLUSIONS: Caution should be exercised when using ciprofloxacin in the treatment of patients with personality abnormalities or symptoms of psychosis."
+                }
+              ]
+            },
+            {
+              "effect": "interstitial nephritis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "66000f072481",
+                  "text": "Suspected ciprofloxacin-induced interstitial nephritis."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "Renal toxicities",
+            "Thrombocytosis",
+            "epileptogenic property",
+            "prolonged ECT seizure",
+            "thrombocyte count",
+            "Stevens-Johnson syndrome",
+            "bile duct",
+            "seizures",
+            "headache",
+            "dizziness",
+            "hallucinations",
+            "psychosis",
+            "personality abnormalities",
+            "interstitial nephritis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q6",
+      "question": "What adverse events are reported for phenytoin in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "phenytoin"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 2,
+      "seconds": 50.7,
+      "report": {
+        "phenytoin": {
+          "sentences_read": 10,
+          "label_found": true,
+          "label_set_id": "035a8d4e-2063-4240-83cb-d7eebcabe301",
+          "effects": [
+            {
+              "effect": "IgE",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "19470dc14d8e",
+                  "text": "The IgA was normalized after phenytoin withdrawal, but IgE determination increased progressively without any atopic symptoms."
+                }
+              ]
+            },
+            {
+              "effect": "fever",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "lymphadenopathy",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "rash",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "hypersensitivity reactions",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "paradoxical seizures",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "360636ebe581",
+                  "text": "We present three patients with paradoxical seizures; their serum phenytoin levels were 43.5 mcg/mL, 46.5 mcg/mL and 38.3 mcg/mL."
+                }
+              ]
+            },
+            {
+              "effect": "hypersensitivity syndrome",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "6cb3d977e6e0",
+                  "text": "Systemic corticosteroids in the phenytoin hypersensitivity syndrome."
+                }
+              ]
+            },
+            {
+              "effect": "Gynecomastia",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "8580d6450663",
+                  "text": "Gynecomastia developed in two epileptic patients some months after the addition of oral fluoresone 750 mg daily to the phenobarbital and phenytoin already being administered."
+                }
+              ]
+            },
+            {
+              "effect": "Valproate levels remained low",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "8929abc3c669",
+                  "text": "Valproate levels remained low because of interactions with phenytoin."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "paradoxical seizures",
+            "Gynecomastia",
+            "Valproate levels remained low"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q7",
+      "question": "What adverse events are reported for tamoxifen in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "tamoxifen"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 1,
+      "seconds": 31.4,
+      "report": {
+        "tamoxifen": {
+          "sentences_read": 14,
+          "label_found": true,
+          "label_set_id": "1e6ff055-590c-41e6-9530-1fdf04cdbd02",
+          "effects": [
+            {
+              "effect": "ovarian endometrioid carcinoma",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "8eb8e9cf9cf4",
+                  "text": "We present the first case of ovarian endometrioid carcinoma and endometriosis in a postmenopausal patient who was treated with tamoxifen for breast cancer."
+                },
+                {
+                  "id": "9671cadedf33",
+                  "text": "Ovarian endometrioid carcinoma and endometriosis developing in a postmenopausal breast cancer patient during tamoxifen therapy: a case report and review of the literature."
+                }
+              ]
+            },
+            {
+              "effect": "endometriosis",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "8eb8e9cf9cf4",
+                  "text": "We present the first case of ovarian endometrioid carcinoma and endometriosis in a postmenopausal patient who was treated with tamoxifen for breast cancer."
+                },
+                {
+                  "id": "9671cadedf33",
+                  "text": "Ovarian endometrioid carcinoma and endometriosis developing in a postmenopausal breast cancer patient during tamoxifen therapy: a case report and review of the literature."
+                }
+              ]
+            },
+            {
+              "effect": "Acute abdomen",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "1263e3a2f123",
+                  "text": "Acute abdomen due to endometriosis in a premenopausal woman taking tamoxifen."
+                }
+              ]
+            },
+            {
+              "effect": "intermittent spotting",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "1bdef5c418eb",
+                  "text": "CASES: Two postmenopausal women treated with tamoxifen and progestational agents for breast carcinoma developed uterine enlargement and intermittent spotting."
+                }
+              ]
+            },
+            {
+              "effect": "uterine enlargement",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "1bdef5c418eb",
+                  "text": "CASES: Two postmenopausal women treated with tamoxifen and progestational agents for breast carcinoma developed uterine enlargement and intermittent spotting."
+                }
+              ]
+            },
+            {
+              "effect": "endometrial carcinoma",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "21d1bc4cc005",
+                  "text": "The authors intend to carry out a case-control study on patients treated with tamoxifen for breast carcinoma to reveal the possible presence of endometrial carcinoma."
+                }
+              ]
+            },
+            {
+              "effect": "High-grade endometrial stromal sarcoma",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "7e789e74d69b",
+                  "text": "High-grade endometrial stromal sarcoma after tamoxifen therapy for breast cancer."
+                }
+              ]
+            },
+            {
+              "effect": "endometrial stromal sarcoma",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "9084bd4e24a5",
+                  "text": "A case of high-grade endometrial stromal sarcoma, confined into an intrauterine polypoid growth, in a woman with a history of breast cancer who was treated with adjuvant tamoxifen."
+                }
+              ]
+            },
+            {
+              "effect": "intrauterine polypoid growth",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "9084bd4e24a5",
+                  "text": "A case of high-grade endometrial stromal sarcoma, confined into an intrauterine polypoid growth, in a woman with a history of breast cancer who was treated with adjuvant tamoxifen."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "Acute abdomen",
+            "intermittent spotting",
+            "uterine enlargement",
+            "High-grade endometrial stromal sarcoma",
+            "endometrial stromal sarcoma",
+            "intrauterine polypoid growth"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q8",
+      "question": "What adverse events are reported for l asparaginase in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "l asparaginase"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 24.3,
+      "report": {
+        "l asparaginase": {
+          "sentences_read": 10,
+          "label_found": false,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "Delayed pseudocyst of the pancreas",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "46348a6807b5",
+                  "text": "Delayed pseudocyst of the pancreas can be a complication of intramuscular L-asparaginase."
+                }
+              ]
+            },
+            {
+              "effect": "pancreatitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "631a0d7f2058",
+                  "text": "L-asparaginase-induced pancreatitis is an uncommon but potential lethal complication of the treatment of leukemia."
+                }
+              ]
+            },
+            {
+              "effect": "cerebral thrombosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6640e79299ea",
+                  "text": "Children with acute lymphoblastic leukemia (ALL), treated with L-asparaginase are at risk for cerebral thrombosis or hemorrhage because of coagulation protein deficiencies."
+                }
+              ]
+            },
+            {
+              "effect": "hemorrhage",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6640e79299ea",
+                  "text": "Children with acute lymphoblastic leukemia (ALL), treated with L-asparaginase are at risk for cerebral thrombosis or hemorrhage because of coagulation protein deficiencies."
+                }
+              ]
+            },
+            {
+              "effect": "seizures",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "74599f339bcf",
+                  "text": "We report 3 cases of children with acute lymphoblastic leukemia who developed seizures and altered sensorium after L-asparaginase therapy."
+                }
+              ]
+            },
+            {
+              "effect": "altered sensorium",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "74599f339bcf",
+                  "text": "We report 3 cases of children with acute lymphoblastic leukemia who developed seizures and altered sensorium after L-asparaginase therapy."
+                }
+              ]
+            },
+            {
+              "effect": "severe necrotizing pancreatitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "7849503b034d",
+                  "text": "L-asparaginase-induced severe necrotizing pancreatitis successfully treated with percutaneous drainage."
+                }
+              ]
+            },
+            {
+              "effect": "acute pancreatitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9b4d9e662efc",
+                  "text": "An adolescent male developed acute pancreatitis and pseudocyst of the pancreas 16 weeks after cessation of intramuscular L-asparaginase."
+                }
+              ]
+            },
+            {
+              "effect": "pseudocyst of the pancreas",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9b4d9e662efc",
+                  "text": "An adolescent male developed acute pancreatitis and pseudocyst of the pancreas 16 weeks after cessation of intramuscular L-asparaginase."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    },
+    {
+      "id": "q9",
+      "question": "What adverse events are reported for insulin in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "insulin"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 35.7,
+      "report": {
+        "insulin": {
+          "sentences_read": 19,
+          "label_found": true,
+          "label_set_id": "0691def8-4a7b-4de3-866f-a280989f47f1",
+          "effects": [
+            {
+              "effect": "allergy",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "4f6e2cc21471",
+                  "text": "Protamine allergy as a complication of insulin hypersensitivity: A case report."
+                }
+              ]
+            },
+            {
+              "effect": "hypoglycemic fits",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "5d42c322ba41",
+                  "text": "Surprisingly, insulin therapy had to be suspended because of hypoglycemic fits and treatment with metformin was started."
+                }
+              ]
+            },
+            {
+              "effect": "lipohypertrophy",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "644443e2bbad",
+                  "text": "Insulin-induced lipohypertrophy: report of a case with histopathology."
+                }
+              ]
+            },
+            {
+              "effect": "increased vascular permeability",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "7abb1ecb058e",
+                  "text": "We conjectured that the side effects of insulin, such as anti-natriuresis and increased vascular permeability, might be pronounced in the presence of the hepatic dysfunction that accompanies insulin insensitivity, hyperinsulinaemia and hypoalbuminaemia."
+                }
+              ]
+            },
+            {
+              "effect": "anti-natriuresis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "7abb1ecb058e",
+                  "text": "We conjectured that the side effects of insulin, such as anti-natriuresis and increased vascular permeability, might be pronounced in the presence of the hepatic dysfunction that accompanies insulin insensitivity, hyperinsulinaemia and hypoalbuminaemia."
+                }
+              ]
+            },
+            {
+              "effect": "dedifferentiation",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "81dd13f00872",
+                  "text": "CONCLUSIONS: In our reported case, a local hyperproduction of TNF-alpha from macrophages that was induced by the injected insulin could explain the dedifferentiation of the adipocytes of the subcutaneous tissue and the reversion that was induced by the local injection of dexamethasone."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "hypoglycemic fits",
+            "increased vascular permeability",
+            "anti-natriuresis",
+            "dedifferentiation"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q10",
+      "question": "What adverse events are reported for clozapine in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "clozapine"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 30.6,
+      "report": {
+        "clozapine": {
+          "sentences_read": 20,
+          "label_found": true,
+          "label_set_id": "09231d80-6343-4a34-bd5b-100c547fd3c9",
+          "effects": [
+            {
+              "effect": "agranulocytosis",
+              "sentences": 3,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "466826abc208",
+                  "text": "Granulocytopenia and agranulocytosis are considered among the most dangerous adverse effects of clozapine."
+                },
+                {
+                  "id": "552ffc96c1f0",
+                  "text": "The male patient was treated with 225-mg/day clozapine and the time to the diagnosis of agranulocytosis was 6 weeks."
+                },
+                {
+                  "id": "961a5ce0d60d",
+                  "text": "Occasionally, despite good therapeutic response, clozapine must be stopped due to dangerous side effects such as agranulocytosis."
+                }
+              ]
+            },
+            {
+              "effect": "tardive OGC",
+              "sentences": 2,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "d9b2e8e64327",
+                  "text": "Surprisingly, we found that three patients appeared to develop tardive OGC while taking clozapine."
+                },
+                {
+                  "id": "db6cbd3bce42",
+                  "text": "The relationship between tardive OGC and clozapine is still unknown."
+                }
+              ]
+            },
+            {
+              "effect": "serum triglyceride levels increased",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "129bc97db600",
+                  "text": "In two patients clozapine was reinstated after risperidone was discontinued; serum triglyceride levels increased."
+                }
+              ]
+            },
+            {
+              "effect": "Granulocytopenia",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "466826abc208",
+                  "text": "Granulocytopenia and agranulocytosis are considered among the most dangerous adverse effects of clozapine."
+                }
+              ]
+            },
+            {
+              "effect": "TD",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "977f718031b0",
+                  "text": "We investigated whether clozapine used as a first-line antipsychotic drug can cause TD."
+                }
+              ]
+            },
+            {
+              "effect": "EPS",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "b4737c67ae9d",
+                  "text": "We present a surprising case of a woman schizophrenic patient treated with clozapine suffering from EPS."
+                }
+              ]
+            },
+            {
+              "effect": "elevated serum triglyceride",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "b586ffb84ca0",
+                  "text": "This increase when clozapine was switched to risperidone and vice versa is consistent with our previous report of elevated serum triglyceride levels in clozapine-treated patients."
+                }
+              ]
+            },
+            {
+              "effect": "eosinophilia",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "b78288e89437",
+                  "text": "Drug-induced eosinophilia is a non-dose-dependent side effect of clozapine."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "tardive OGC"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q11",
+      "question": "What adverse events are reported for infliximab in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "infliximab"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 1,
+      "seconds": 33.1,
+      "report": {
+        "infliximab": {
+          "sentences_read": 12,
+          "label_found": true,
+          "label_set_id": "37eaca10-d812-48bc-8b8e-b836bfa9968f",
+          "effects": [
+            {
+              "effect": "cutaneous hypersensitivity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "0ede37aac9cb",
+                  "text": "These features have not been previously associated with infliximab or leflunomide therapy and represent a unique cutaneous hypersensitivity reaction that does not fit any known description of an immune-mediated hypersensitivity reaction."
+                }
+              ]
+            },
+            {
+              "effect": "necrotizing vasculitis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "16fa1068d38e",
+                  "text": "Sensory neuropathy revealing necrotizing vasculitis during infliximab therapy for rheumatoid arthritis."
+                }
+              ]
+            },
+            {
+              "effect": "Sensory neuropathy",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "16fa1068d38e",
+                  "text": "Sensory neuropathy revealing necrotizing vasculitis during infliximab therapy for rheumatoid arthritis."
+                }
+              ]
+            },
+            {
+              "effect": "venous thrombosis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "5b3ad1efc8c3",
+                  "text": "The site of thrombosis and the chronological relationship with the IIR implicates a hypersensitivity to infliximab in the causation of the venous thrombosis in this case."
+                }
+              ]
+            },
+            {
+              "effect": "reactivation of hepatitis B virus",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "931d11183c67",
+                  "text": "Clinically apparent reactivation of hepatitis B virus typically occurred 1 month after the 3rd dose of infliximab."
+                }
+              ]
+            },
+            {
+              "effect": "lupus-like syndrome",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "951774946033",
+                  "text": "A lupus-like syndrome associated with infliximab therapy."
+                }
+              ]
+            },
+            {
+              "effect": "severe transient neutropenia",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "a06dcaac5736",
+                  "text": "After the second infliximab infusion, he was found to have a severe transient neutropenia (0.5 x 10(9)/L)."
+                }
+              ]
+            },
+            {
+              "effect": "transient neutropenia",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "a06dcaac5736",
+                  "text": "After the second infliximab infusion, he was found to have a severe transient neutropenia (0.5 x 10(9)/L)."
+                }
+              ]
+            },
+            {
+              "effect": "demyelinating disease",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "fc1e0b88f6bc",
+                  "text": "Earlier reports on the use of etanercept or infliximab in patients with rheumatoid arthritis, psoriatic arthritis, or juvenile rheumatoid arthritis suggested an increased risk of demyelinating disease."
+                }
+              ]
+            },
+            {
+              "effect": "peripheral neuropathy",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "ec7f3de9c71d",
+                  "text": "We describe 2 patients with severe erosive rheumatoid arthritis and rheumatoid vasculitis, respectively, in whom infliximab therapy was associated with peripheral neuropathy due to necrotizing vasculitis in one patient and to progression of preexisting mononeuritis multiplex in the other."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "necrotizing vasculitis",
+            "Sensory neuropathy",
+            "venous thrombosis"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q12",
+      "question": "What adverse events are reported for cisplatin in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "cisplatin"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 0,
+      "seconds": 47.9,
+      "report": {
+        "cisplatin": {
+          "sentences_read": 16,
+          "label_found": true,
+          "label_set_id": "00396546-6a80-4b9f-a5f8-c22c1d1bb173",
+          "effects": [
+            {
+              "effect": "Hypersensitivity reactions",
+              "sentences": 2,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "0085391bf03c",
+                  "text": "Hypersensitivity reactions to cisplatin following multiple uncomplicated courses: a report on two cases."
+                },
+                {
+                  "id": "64a181062fde",
+                  "text": "Prick tests and intradermal tests with a series of dilutions of carboplatin and cisplatin were performed on three patients who had exhibited medium and severe hypersensitivity reactions to carboplatin."
+                }
+              ]
+            },
+            {
+              "effect": "anaphylactoid reactions",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "1646e21b6982",
+                  "text": "We observed 5 reactions in 3 patients that appear to be related to a high dose-infusion time ratio, indicating that dose and rate of infusion may be important factors in precipitating anaphylactoid reactions with cisplatin."
+                }
+              ]
+            },
+            {
+              "effect": "monomorphic ventricular tachycardia",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "2b1659a68463",
+                  "text": "A case of a 36-year-old man who presented with monomorphic ventricular tachycardia 12 years following a myocardial infarction that occurred during his last course of bleomycin-etoposide-cisplatin therapy for testicular cancer is reported."
+                }
+              ]
+            },
+            {
+              "effect": "cardiac electrical activity",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "549d0afe2c4c",
+                  "text": "Cisplatin toxicity on cardiac electrical activity is discussed."
+                }
+              ]
+            },
+            {
+              "effect": "Posterior leukoencephalopathy",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "56ed111aed60",
+                  "text": "Posterior leukoencephalopathy following cisplatin, bleomycin and vinblastine therapy for germ cell tumor of the ovary."
+                }
+              ]
+            },
+            {
+              "effect": "edema",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "5e0b3b5e6f0d",
+                  "text": "During her third cycle, she again received cisplatin 100 mg/m2 over 30 minutes and developed palmar pruritus, urticaria, and edema."
+                }
+              ]
+            },
+            {
+              "effect": "palmar pruritus",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "5e0b3b5e6f0d",
+                  "text": "During her third cycle, she again received cisplatin 100 mg/m2 over 30 minutes and developed palmar pruritus, urticaria, and edema."
+                }
+              ]
+            },
+            {
+              "effect": "urticaria",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "5e0b3b5e6f0d",
+                  "text": "During her third cycle, she again received cisplatin 100 mg/m2 over 30 minutes and developed palmar pruritus, urticaria, and edema."
+                }
+              ]
+            },
+            {
+              "effect": "thrombus",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "b1630102d357",
+                  "text": "We present a rare case of a thrombus at the aortic arch found 1 month after cisplatin-based chemotherapy in a 50-year-old patient with a diagnosis of small cell lung cancer; there were no symptoms related to the thrombus."
+                }
+              ]
+            },
+            {
+              "effect": "irreversible lethal renal failure",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "dce89f6662cf",
+                  "text": "A sixty-year-old woman with advanced breast cancer, previously treated with cisplatin, developed an irreversible lethal renal failure with anuria, the day after 5 g/m2 bolus ifosfamide."
+                }
+              ]
+            },
+            {
+              "effect": "SIADH",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "ea57d1a069c7",
+                  "text": "Syndrome of inappropriate secretion of ADH (SIADH) following cisplatin administration in a pulmonary adenocarcinoma patient with a malignant pleural effusion."
+                }
+              ]
+            },
+            {
+              "effect": "Syndrome of inappropriate secretion of ADH",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "ea57d1a069c7",
+                  "text": "Syndrome of inappropriate secretion of ADH (SIADH) following cisplatin administration in a pulmonary adenocarcinoma patient with a malignant pleural effusion."
+                }
+              ]
+            },
+            {
+              "effect": "acute emesis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f8038ddcd634",
+                  "text": "In the Perugia Consensus Conference it was decided that the recommended antiemetic regimen in the prevention of acute emesis induced by a single high, low and repeated doses of cisplatin is a serotonin receptor antagonist plus dexamethasone."
+                }
+              ]
+            },
+            {
+              "effect": "Lethal anuria",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "732c47d15d72",
+                  "text": "We strongly suspect that this lethal anuria was mainly due to ifosfamide, occurring in a patient having received previous cisplatin chemotherapy and with poor kidney perfusion due to transient hypotension."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "Hypersensitivity reactions",
+            "monomorphic ventricular tachycardia",
+            "cardiac electrical activity",
+            "Posterior leukoencephalopathy",
+            "palmar pruritus",
+            "urticaria",
+            "irreversible lethal renal failure",
+            "SIADH",
+            "Syndrome of inappropriate secretion of ADH",
+            "acute emesis",
+            "Lethal anuria"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q13",
+      "question": "What adverse events are reported for interferon alpha in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "interferon alpha"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 41.9,
+      "report": {
+        "interferon alpha": {
+          "sentences_read": 13,
+          "label_found": false,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "bilateral optic neuritis",
+              "sentences": 2,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "133e3b91ca9b",
+                  "text": "Case 1, a 62-year-old woman, developed bilateral optic neuritis with decreased sensation of vibration and increased deep tendon reflex in the lower extremities after a seven-month use of recombinant interferon alpha-2a for chronic active hepatitis C."
+                },
+                {
+                  "id": "93146759e068",
+                  "text": "Case 2, a 29-year-old woman, developed bilateral optic neuritis combined with numbness of the lower extremities as well as bowel and bladder dysfunction after a 22-month use of recombinant interferon alpha-2b for chronic myelogenous leukemia."
+                }
+              ]
+            },
+            {
+              "effect": "sarcoidosis",
+              "sentences": 2,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "409959d5a358",
+                  "text": "We suggest that sarcoidosis may develop in chronic hepatitis C patients during interferon alpha and/or ribavirin treatment, and diagnostic tests for this adverse effect should be performed during the follow-ups."
+                },
+                {
+                  "id": "903181a868b1",
+                  "text": "We report a case with chronic hepatitis C (CHC) who developed sarcoidosis after the treatment by interferon alpha and ribavirin."
+                }
+              ]
+            },
+            {
+              "effect": "decreased sensation of vibration",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "133e3b91ca9b",
+                  "text": "Case 1, a 62-year-old woman, developed bilateral optic neuritis with decreased sensation of vibration and increased deep tendon reflex in the lower extremities after a seven-month use of recombinant interferon alpha-2a for chronic active hepatitis C."
+                }
+              ]
+            },
+            {
+              "effect": "increased deep tendon reflex",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "133e3b91ca9b",
+                  "text": "Case 1, a 62-year-old woman, developed bilateral optic neuritis with decreased sensation of vibration and increased deep tendon reflex in the lower extremities after a seven-month use of recombinant interferon alpha-2a for chronic active hepatitis C."
+                }
+              ]
+            },
+            {
+              "effect": "psoriasis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "5214924024b3",
+                  "text": "We report four patients, three of whom first developed psoriasis and one who had an aggravation of the condition during treatment with interferon-alpha."
+                }
+              ]
+            },
+            {
+              "effect": "Vogt-Koyanagi-Harada disease",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "52e013a4372e",
+                  "text": "Vogt-Koyanagi-Harada disease occurring during interferon alpha therapy for chronic hepatitis C."
+                }
+              ]
+            },
+            {
+              "effect": "bowel and bladder dysfunction",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "93146759e068",
+                  "text": "Case 2, a 29-year-old woman, developed bilateral optic neuritis combined with numbness of the lower extremities as well as bowel and bladder dysfunction after a 22-month use of recombinant interferon alpha-2b for chronic myelogenous leukemia."
+                }
+              ]
+            },
+            {
+              "effect": "numbness of the lower extremities",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "93146759e068",
+                  "text": "Case 2, a 29-year-old woman, developed bilateral optic neuritis combined with numbness of the lower extremities as well as bowel and bladder dysfunction after a 22-month use of recombinant interferon alpha-2b for chronic myelogenous leukemia."
+                }
+              ]
+            },
+            {
+              "effect": "Restless legs syndrome",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "97ed3dc0d580",
+                  "text": "Restless legs syndrome due to interferon-alpha."
+                }
+              ]
+            },
+            {
+              "effect": "cardiomyopathy",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9a0895e383f6",
+                  "text": "Reversible cardiomyopathy caused by administration of interferon alpha."
+                }
+              ]
+            },
+            {
+              "effect": "polymyositis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b311f1206e01",
+                  "text": "A case of polymyositis with dilated cardiomyopathy associated with interferon alpha treatment for hepatitis B."
+                }
+              ]
+            },
+            {
+              "effect": "dilated cardiomyopathy",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b311f1206e01",
+                  "text": "A case of polymyositis with dilated cardiomyopathy associated with interferon alpha treatment for hepatitis B."
+                }
+              ]
+            },
+            {
+              "effect": "Autoimmune thyroid disease",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b8a5d7e308bc",
+                  "text": "Autoimmune thyroid disease is a common side-effect of interferon-alpha (IFN-alpha) treatment of viral hepatitis C."
+                }
+              ]
+            },
+            {
+              "effect": "acute dystonia",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "e4e3b21c7e74",
+                  "text": "In this case report, we present clinical and laboratory findings of a case with chronic hepatitis B that developed acute dystonia soon after the first dose of pegylated interferon alpha."
+                }
+              ]
+            },
+            {
+              "effect": "hepatitis B",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "e4e3b21c7e74",
+                  "text": "In this case report, we present clinical and laboratory findings of a case with chronic hepatitis B that developed acute dystonia soon after the first dose of pegylated interferon alpha."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    },
+    {
+      "id": "q14",
+      "question": "What adverse events are reported for gemcitabine in these case reports, and are they on its FDA label?",
+      "plan": {
+        "drugs": [
+          "gemcitabine"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 0,
+      "seconds": 30.7,
+      "report": {
+        "gemcitabine": {
+          "sentences_read": 10,
+          "label_found": true,
+          "label_set_id": "06dd9d40-74fc-4409-93b1-a46be7126331",
+          "effects": [
+            {
+              "effect": "unpredictable side effects",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "15162b2c63c4",
+                  "text": "Gemcitabine is a chemotherapy agent that may cause unpredictable side effects."
+                }
+              ]
+            },
+            {
+              "effect": "linear immunoglobulin (Ig) A bullous dermatosis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "55085cfa21a3",
+                  "text": "OBJECTIVE: To report a case of linear immunoglobulin (Ig) A bullous dermatosis (LABD) induced by gemcitabine."
+                }
+              ]
+            },
+            {
+              "effect": "LABD",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "55085cfa21a3",
+                  "text": "OBJECTIVE: To report a case of linear immunoglobulin (Ig) A bullous dermatosis (LABD) induced by gemcitabine."
+                }
+              ]
+            },
+            {
+              "effect": "radiation recall",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "55a7ae0645da",
+                  "text": "Gemcitabine should be added to the list of drugs known to cause radiation recall."
+                }
+              ]
+            },
+            {
+              "effect": "hemolytic uremic syndrome",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "5cb2aeaebec8",
+                  "text": "Rituximab-based therapy for gemcitabine-induced hemolytic uremic syndrome in a patient with metastatic pancreatic adenocarcinoma: a case report."
+                }
+              ]
+            },
+            {
+              "effect": "Severe hemolytic uremic syndrome",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "79deaa9b63bc",
+                  "text": "Severe hemolytic uremic syndrome in an advanced ovarian cancer patient treated with carboplatin and gemcitabine."
+                }
+              ]
+            },
+            {
+              "effect": "radiation recall reactions",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "83c706e4e56e",
+                  "text": "The majority of radiation recall reactions attributed to gemcitabine are reported to affect internal tissue or organs."
+                }
+              ]
+            },
+            {
+              "effect": "myositis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "93fc2a78c5a8",
+                  "text": "CASE REPORT: We hereby report a case of radiation recall dermatitis and myositis occurring on gemcitabine monotherapy, five months after completing chemoradiation for locally advanced pancreatic cancer."
+                }
+              ]
+            },
+            {
+              "effect": "radiation recall dermatitis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "93fc2a78c5a8",
+                  "text": "CASE REPORT: We hereby report a case of radiation recall dermatitis and myositis occurring on gemcitabine monotherapy, five months after completing chemoradiation for locally advanced pancreatic cancer."
+                }
+              ]
+            },
+            {
+              "effect": "thrombotic microangiopathy of the kidneys",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "db5a1587a852",
+                  "text": "Described here are 2 patients who developed thrombotic microangiopathy of the kidneys after receiving high cumulative doses of the new anticancer drug gemcitabine."
+                }
+              ]
+            },
+            {
+              "effect": "discontinuation",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "33125e5ab679",
+                  "text": "Clinical awareness, timely detection and discontinuation of gemcitabine are mandatory to prevent this rare but disastrous complication of gemcitabine therapy."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "unpredictable side effects",
+            "linear immunoglobulin (Ig) A bullous dermatosis",
+            "LABD",
+            "myositis",
+            "radiation recall dermatitis",
+            "thrombotic microangiopathy of the kidneys"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q15",
+      "question": "Compare the side effects reported for heparin and methotrexate. Which ones are not on their FDA labels?",
+      "plan": {
+        "drugs": [
+          "heparin",
+          "methotrexate"
+        ],
+        "check_label": true
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 2,
+      "seconds": 103.4,
+      "report": {
+        "heparin": {
+          "sentences_read": 21,
+          "label_found": true,
+          "label_set_id": "02fb700d-a28c-4d45-b78d-382dc0d5986c",
+          "effects": [
+            {
+              "effect": "thrombocytopenia",
+              "sentences": 5,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "00a50a76e33a",
+                  "text": "Heparin-dependent antibodies and thrombosis without heparin-induced thrombocytopenia."
+                },
+                {
+                  "id": "00a50a76e33a",
+                  "text": "Heparin-dependent antibodies and thrombosis without heparin-induced thrombocytopenia."
+                },
+                {
+                  "id": "4900441d550a",
+                  "text": "Warfarin-induced skin necrosis and heparin-induced thrombocytopenia following mitral valve replacement for marantic endocarditis."
+                }
+              ]
+            },
+            {
+              "effect": "hyperkalemia",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "5d2a80f0a52c",
+                  "text": "Our findings suggest that hyperkalemia can develop with the use of low-dose heparin, within seven days of initiating heparin therapy, and that patients with diabetes mellitus or chronic renal insufficiency are especially predisposed to this complication."
+                },
+                {
+                  "id": "91f91c6635c4",
+                  "text": "While most physicians are aware of heparin-induced thrombocytopenia and skin necrosis, the association of heparin and hyperkalemia is less well recognized."
+                }
+              ]
+            },
+            {
+              "effect": "Spontaneous hemothorax",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "1c1fb5661803",
+                  "text": "Spontaneous hemothorax following anticoagulation with low-molecular-weight heparin."
+                }
+              ]
+            },
+            {
+              "effect": "abnormal platelet aggregation",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "62c5ff9b2fa0",
+                  "text": "The association between heparin and priapism is often recognized; abnormal platelet aggregation could play a role in the pathogenesis of this side effect."
+                }
+              ]
+            },
+            {
+              "effect": "priapism",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "62c5ff9b2fa0",
+                  "text": "The association between heparin and priapism is often recognized; abnormal platelet aggregation could play a role in the pathogenesis of this side effect."
+                }
+              ]
+            },
+            {
+              "effect": "chest pain",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "a7894cc5fdc6",
+                  "text": "We describe two patients with Boerhaave's syndrome who presented with chest pain mimicking cardiac pain and received heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "cardiac pain",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "a7894cc5fdc6",
+                  "text": "We describe two patients with Boerhaave's syndrome who presented with chest pain mimicking cardiac pain and received heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "repeated venous thromboembolism",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "d1fd1c9a9cac",
+                  "text": "Despite these antithrombotic effects, the patient developed repeated venous thromboembolism during treatment with low-molecular-weight heparin."
+                }
+              ]
+            },
+            {
+              "effect": "thromboembolism",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "d9c23b0bba65",
+                  "text": "We describe a case of extensive thromboembolism associated with antithrombin (AT) deficiency complicated by thrombocytopenia which resolved when low-molecular-weight heparin was instituted."
+                }
+              ]
+            },
+            {
+              "effect": "HIT",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "dfa79d533d30",
+                  "text": "Most cardiac surgical patients have had previous exposure to heparin for diagnostic or therapeutic interventions and hence have an increased susceptibility to developing heparin-induced thrombocytopenia (HIT) postoperatively."
+                }
+              ]
+            },
+            {
+              "effect": "thrombosis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "e9b05a55f6a2",
+                  "text": "Heparin-associated thrombocytopenia and thrombosis is a severe complication of systemic heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "large intramural esophageal hematoma",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "ec2e7c350605",
+                  "text": "One patient developed large intramural esophageal hematoma as a complication of heparin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "clinical and microbiologic response",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f0164c5f74d8",
+                  "text": "A clinical and microbiologic response occurred when anticoagulation therapy with heparin was added to the treatment regimen."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "Spontaneous hemothorax",
+            "abnormal platelet aggregation",
+            "chest pain",
+            "cardiac pain",
+            "repeated venous thromboembolism",
+            "large intramural esophageal hematoma",
+            "clinical and microbiologic response"
+          ]
+        },
+        "methotrexate": {
+          "sentences_read": 31,
+          "label_found": true,
+          "label_set_id": "04a95db9-a124-4b97-bd71-1c37a6b3b0c8",
+          "effects": [
+            {
+              "effect": "leukoencephalopathy",
+              "sentences": 2,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "24624bf4d105",
+                  "text": "Methotrexate-induced leukoencephalopathy is treatable with high-dose folinic acid: a case report and analysis of the literature."
+                },
+                {
+                  "id": "31dfe509db3e",
+                  "text": "We present two children with acute lymphocytic leukemia who developed leukoencephalopathy following administration of a combination of intravenous ara = C and methotrexate during the consolidation phase of chemotherapy."
+                }
+              ]
+            },
+            {
+              "effect": "lymphoproliferative diseases",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "0207a64b84e1",
+                  "text": "The mild immunosuppression that occurs with methotrexate therapy probably places patients with rheumatoid arthritis at added risk of developing lymphoproliferative diseases, but coincidence cannot be excluded."
+                }
+              ]
+            },
+            {
+              "effect": "fibrosis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "liver damage",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "alter the elimination",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "2f47bd97af5b",
+                  "text": "Several drugs (e.g., penicillin, probenecid) can alter the elimination of methotrexate."
+                }
+              ]
+            },
+            {
+              "effect": "Renal failure",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "2fe6b3d1b332",
+                  "text": "Renal failure after high-dose methotrexate in a child homozygous for MTHFR C677T polymorphism."
+                }
+              ]
+            },
+            {
+              "effect": "systemic toxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "38611ca09fa2",
+                  "text": "We believe that methotrexate represents a relatively effective alternative to surgery in patients with early unruptured tubal pregnancy, but suggest that it be used with caution in view of possible systemic toxicity."
+                }
+              ]
+            },
+            {
+              "effect": "Toxic hepatitis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "526056f8f1dd",
+                  "text": "Toxic hepatitis due to combination therapy with methotrexate and etretinate in psoriasis."
+                }
+              ]
+            },
+            {
+              "effect": "Complications of tumour overkill",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "6615261c8cf6",
+                  "text": "Complications of tumour overkill when associated with high dose methotrexate therapy."
+                }
+              ]
+            },
+            {
+              "effect": "Lymphoma",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "876dc2d5d843",
+                  "text": "Lymphoma developing in a patient with rheumatoid arthritis taking methotrexate."
+                }
+              ]
+            },
+            {
+              "effect": "anaphylaxis",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "9483db917421",
+                  "text": "Management and successful desensitization in methotrexate-induced anaphylaxis."
+                }
+              ]
+            },
+            {
+              "effect": "an iron deficiency anemia",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "960ab35e61fe",
+                  "text": "A 52 year-old male patient diagnosed of ankylosing spondylitis presented with an iron deficiency anemia after a ten-month treatment of methotrexate."
+                }
+              ]
+            },
+            {
+              "effect": "ascites",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "9902f08c45a2",
+                  "text": "Because of the presence of severe ascites and massive ovarian enlargement, it was elected to treat this patient with methotrexate therapy rather than surgery."
+                }
+              ]
+            },
+            {
+              "effect": "massive ovarian enlargement",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "9902f08c45a2",
+                  "text": "Because of the presence of severe ascites and massive ovarian enlargement, it was elected to treat this patient with methotrexate therapy rather than surgery."
+                }
+              ]
+            },
+            {
+              "effect": "diffuse papular eruption",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "c78dde78d683",
+                  "text": "OBJECTIVE: To report a case of a diffuse papular eruption following treatment of psoriasis with methotrexate injections."
+                }
+              ]
+            },
+            {
+              "effect": "nephropathy",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "c9131e6fc760",
+                  "text": "Methotrexate-associated nephropathy is a rare complication in pediatric oncology, and a review of the literature suggests that exposure to nephrotoxic agents may be a significant but perhaps underrecognized risk factor for its development."
+                }
+              ]
+            },
+            {
+              "effect": "serositis",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "caf3d3081443",
+                  "text": "Methotrexate may rarely provoke serositis, even with low doses and after just a few weeks of therapy."
+                }
+              ]
+            },
+            {
+              "effect": "renal toxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "cba16af9f054",
+                  "text": "Early recognition of renal toxicity of high-dose methotrexate therapy: a case report."
+                }
+              ]
+            },
+            {
+              "effect": "severe toxicity",
+              "sentences": 1,
+              "on_label": false,
+              "evidence": [
+                {
+                  "id": "f776fb4879ad",
+                  "text": "The authors report two cases of delayed elimination of methotrexate in patients receiving ciprofloxacin, with severe toxicity."
+                }
+              ]
+            },
+            {
+              "effect": "neurotoxicity",
+              "sentences": 1,
+              "on_label": true,
+              "evidence": [
+                {
+                  "id": "fe39b5efee97",
+                  "text": "Clinicians should be aware of the signs and symptoms of neurotoxicity during treatment, as well as predisposing factors that put patients receiving methotrexate at risk for neurotoxic effects."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": [
+            "liver damage",
+            "alter the elimination",
+            "Complications of tumour overkill",
+            "an iron deficiency anemia",
+            "massive ovarian enlargement",
+            "diffuse papular eruption",
+            "nephropathy",
+            "serositis",
+            "severe toxicity"
+          ]
+        }
+      }
+    },
+    {
+      "id": "q16",
+      "question": "Compare the side effects reported for lithium and mtx. Which ones are not on their FDA labels?",
+      "plan": {
+        "drugs": [
+          "lithium",
+          "mtx"
+        ],
+        "check_label": false
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 68.6,
+      "report": {
+        "lithium": {
+          "sentences_read": 20,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "Creutzfeldt-Jakob syndrome",
+              "sentences": 2,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "1917a87279db",
+                  "text": "Lithium-induced Creutzfeldt-Jakob syndrome."
+                },
+                {
+                  "id": "8508a66bb4cb",
+                  "text": "Several cases of lithium-induced Creutzfeldt-Jakob syndrome have been reported to date; all of them were elderly patients and a half had \"therapeutic\" lithium serum levels."
+                }
+              ]
+            },
+            {
+              "effect": "polyuria",
+              "sentences": 2,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "1fce3ded5e61",
+                  "text": "Clinicians have been aware of lithium toxicity for many years and traditionally have administered thiazide diuretics for lithium-induced polyuria and nephrogenic diabetes insipidus."
+                },
+                {
+                  "id": "dbad8f671e9e",
+                  "text": "Lithium therapy was discontinued because of poor compliance to the medication and intolerable polyuria."
+                }
+              ]
+            },
+            {
+              "effect": "seizure",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "0538ca32e099",
+                  "text": "The only possible seizure-provoking factors were modest doses of lithium and chlorpromazine, which the patient was on, and family history of seizure in a brother."
+                }
+              ]
+            },
+            {
+              "effect": "organic brain syndromes",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "2754c548167e",
+                  "text": "There have been many reports of probable lithium-induced organic brain syndromes occurring when serum lithium levels are within or close to the therapeutic range."
+                }
+              ]
+            },
+            {
+              "effect": "neuroleptic malignant syndrome",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "27c6997b153f",
+                  "text": "The authors describe a case of neuroleptic malignant syndrome that occurred in a patient on amitriptyline and lithium carbonate."
+                }
+              ]
+            },
+            {
+              "effect": "thyrotoxicosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "27d311fe4c3d",
+                  "text": "The case of a bipolar patient who developed thyrotoxicosis with severe exophthalmos while on lithium therapy is described."
+                }
+              ]
+            },
+            {
+              "effect": "exophthalmos",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "27d311fe4c3d",
+                  "text": "The case of a bipolar patient who developed thyrotoxicosis with severe exophthalmos while on lithium therapy is described."
+                }
+              ]
+            },
+            {
+              "effect": "cognitive impairment",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9f781144f00a",
+                  "text": "Serum lithium levels fell rapidly, but the cognitive impairment associated with the delirium typically persisted for another week or two."
+                }
+              ]
+            },
+            {
+              "effect": "delirium",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9f781144f00a",
+                  "text": "Serum lithium levels fell rapidly, but the cognitive impairment associated with the delirium typically persisted for another week or two."
+                }
+              ]
+            },
+            {
+              "effect": "tremor",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "c438ef3e8077",
+                  "text": "Two patients with bipolar affective disorder and a history of bronchospastic phenomena experienced tremor during lithium carbonate therapy."
+                }
+              ]
+            },
+            {
+              "effect": "CDI",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "cbd14f4516ae",
+                  "text": "Potential mechanisms regarding the pathophysiology of lithium-associated CDI are discussed."
+                }
+              ]
+            },
+            {
+              "effect": "severe lithium-induced side effects",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "f89581945bb9",
+                  "text": "Since recent studies have reported no negative interactions with concurrent use, we here report three cases (one case of a prolonged seizure, a serotonin syndrome and a focal seizure) of severe lithium-induced side effects while patients underwent ECT without complications and lithium serum levels were still subtherapeutic."
+                }
+              ]
+            },
+            {
+              "effect": "focal seizure",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "f89581945bb9",
+                  "text": "Since recent studies have reported no negative interactions with concurrent use, we here report three cases (one case of a prolonged seizure, a serotonin syndrome and a focal seizure) of severe lithium-induced side effects while patients underwent ECT without complications and lithium serum levels were still subtherapeutic."
+                }
+              ]
+            },
+            {
+              "effect": "serotonin syndrome",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "f89581945bb9",
+                  "text": "Since recent studies have reported no negative interactions with concurrent use, we here report three cases (one case of a prolonged seizure, a serotonin syndrome and a focal seizure) of severe lithium-induced side effects while patients underwent ECT without complications and lithium serum levels were still subtherapeutic."
+                }
+              ]
+            },
+            {
+              "effect": "Lithium toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "f8be911e791d",
+                  "text": "Lithium toxicity in a neonate."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        },
+        "mtx": {
+          "sentences_read": 13,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "Pneumonitis",
+              "sentences": 3,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "50a19cee9caf",
+                  "text": "Pneumonitis is emerging as one of the most unpredictable and potentially serious, adverse effects of treatment with MTX."
+                },
+                {
+                  "id": "b40095cf1232",
+                  "text": "Although risk factors for MTX-induced pulmonary toxicity are poorly understood, the presence in 3 out of 5 of our patients of pre-existing lung disease, represented by diffuse interstitial changes on chest X-ray, and mild bronchial asthma in two RA patients and by pulmonary silicosis in the patient with PsA may account for a predisposition to the development of MTX pneumonitis."
+                },
+                {
+                  "id": "cdfa4dee46cb",
+                  "text": "The presence of a lymphocyte alveolitis with a predominance of CD4+ T cells in 3 RA patients and CD8+ T cells with a concomitant increase in neutrophils in another case suggests that immunologically mediated reactions may be one damage mechanism in MTX-induced pneumonitis."
+                }
+              ]
+            },
+            {
+              "effect": "enhanced hematopoietic toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "04fca879cc2d",
+                  "text": "We hypothesize that decreased renal elimination of MTX induced by the COX-2 inhibitor resulted in enhanced hematopoietic toxicity and immunosuppression causing the EBV-associated lymphoproliferative disease."
+                }
+              ]
+            },
+            {
+              "effect": "immunosuppression",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "04fca879cc2d",
+                  "text": "We hypothesize that decreased renal elimination of MTX induced by the COX-2 inhibitor resulted in enhanced hematopoietic toxicity and immunosuppression causing the EBV-associated lymphoproliferative disease."
+                }
+              ]
+            },
+            {
+              "effect": "lymphoproliferative disease",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "04fca879cc2d",
+                  "text": "We hypothesize that decreased renal elimination of MTX induced by the COX-2 inhibitor resulted in enhanced hematopoietic toxicity and immunosuppression causing the EBV-associated lymphoproliferative disease."
+                }
+              ]
+            },
+            {
+              "effect": "fibrosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "liver damage",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "0de2c5daef0f",
+                  "text": "BACKGROUND: Methotrexate (MTX) may induce liver damage, which in some psoriatics will lead to fibrosis or cirrhosis."
+                }
+              ]
+            },
+            {
+              "effect": "acute hypersensitivity reaction",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "138410e07be8",
+                  "text": "In the absence of mucositis or diarrhea, severe dermatologic toxicity following a single low dose of the drug suggests an 'allergic' or acute hypersensitivity reaction to MTX in this patient."
+                }
+              ]
+            },
+            {
+              "effect": "dermatologic toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "138410e07be8",
+                  "text": "In the absence of mucositis or diarrhea, severe dermatologic toxicity following a single low dose of the drug suggests an 'allergic' or acute hypersensitivity reaction to MTX in this patient."
+                }
+              ]
+            },
+            {
+              "effect": "severe dermatologic toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "138410e07be8",
+                  "text": "In the absence of mucositis or diarrhea, severe dermatologic toxicity following a single low dose of the drug suggests an 'allergic' or acute hypersensitivity reaction to MTX in this patient."
+                }
+              ]
+            },
+            {
+              "effect": "hepatic necrosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "ac6e08bb2a48",
+                  "text": "A 40-year-old man with a long standing history of rheumatoid arthritis was treated with MTX over a 6 month period and developed an overwhelming hepatic necrosis."
+                }
+              ]
+            },
+            {
+              "effect": "neurotoxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b07d1b30d797",
+                  "text": "We believe that this represents an unusual case of moderate-dose MTX-induced neurotoxicity in a patient with gastric cancer, which has not previously been reported."
+                }
+              ]
+            },
+            {
+              "effect": "pulmonary toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "b40095cf1232",
+                  "text": "Although risk factors for MTX-induced pulmonary toxicity are poorly understood, the presence in 3 out of 5 of our patients of pre-existing lung disease, represented by diffuse interstitial changes on chest X-ray, and mild bronchial asthma in two RA patients and by pulmonary silicosis in the patient with PsA may account for a predisposition to the development of MTX pneumonitis."
+                }
+              ]
+            },
+            {
+              "effect": "lymphocyte alveolitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "cdfa4dee46cb",
+                  "text": "The presence of a lymphocyte alveolitis with a predominance of CD4+ T cells in 3 RA patients and CD8+ T cells with a concomitant increase in neutrophils in another case suggests that immunologically mediated reactions may be one damage mechanism in MTX-induced pneumonitis."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    },
+    {
+      "id": "q17",
+      "question": "Compare the side effects reported for carbamazepine and ciprofloxacin. Which ones are not on their FDA labels?",
+      "plan": {
+        "drugs": [
+          "carbamazepine",
+          "ciprofloxacin"
+        ],
+        "check_label": false
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 83.0,
+      "report": {
+        "carbamazepine": {
+          "sentences_read": 26,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "hyponatremia",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "061a899494af",
+                  "text": "We discuss the association between carbamazepine and hyponatremia and the causes of hyponatremia after cardiopulmonary bypass."
+                }
+              ]
+            },
+            {
+              "effect": "massive overdose",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "0f48d15e4701",
+                  "text": "The authors report a woman who took a massive overdose (OD) of carbamazepine (CBZ)."
+                }
+              ]
+            },
+            {
+              "effect": "biochemical abnormality",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "13cfd31b2d0e",
+                  "text": "Although asymptomatic, the biochemical abnormality improved after discontinuation of carbamazepine."
+                }
+              ]
+            },
+            {
+              "effect": "hepatopathy",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "2055d7f48b8d",
+                  "text": "Four weeks earlier she had developed hepatopathy during a regimen of carbamazepine, lynestrenol and sodium valproate."
+                }
+              ]
+            },
+            {
+              "effect": "new complete right bundle branch block",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "3ecca8cc8389",
+                  "text": "A 53 year old Greenlandic male was admitted twice over a period of 4 years with a new complete right bundle branch block after ingestion of 10 g and 4 g of carbamazepine respectively."
+                }
+              ]
+            },
+            {
+              "effect": "Cutaneous rashes",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "490833e62432",
+                  "text": "Cutaneous rashes and eruptions can be caused by many medications, including carbamazepine."
+                }
+              ]
+            },
+            {
+              "effect": "eruptions",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "490833e62432",
+                  "text": "Cutaneous rashes and eruptions can be caused by many medications, including carbamazepine."
+                }
+              ]
+            },
+            {
+              "effect": "right bundle branch block",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "5d03dbf016b4",
+                  "text": "Carbamazepine induced right bundle branch block in a Greenlandic patient."
+                }
+              ]
+            },
+            {
+              "effect": "adverse event",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "812d4e62a8bf",
+                  "text": "Of note, the patient had been on carbamazepine therapy one year earlier and had experienced the same adverse event."
+                }
+              ]
+            },
+            {
+              "effect": "positive",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "94561e975f58",
+                  "text": "CASE REPORT: Two of our patients with history of ingestion of carbamazepine were tested positive on screening with the tricyclic antidepressant immunoassay."
+                }
+              ]
+            },
+            {
+              "effect": "carbamazepine toxicity",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "a8e250d00f18",
+                  "text": "The present report suggests that clarithromycin coadministration induces increased plasma carbamazepine concentrations, which may result in carbamazepine toxicity."
+                }
+              ]
+            },
+            {
+              "effect": "Diabetes mellitus",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "ba0791518033",
+                  "text": "Carbamazepine-induced Diabetes mellitus."
+                }
+              ]
+            },
+            {
+              "effect": "systemic lupus erythematosus-like disease",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "ca8beb483dec",
+                  "text": "Carbamazepine-induced systemic lupus erythematosus-like disease."
+                }
+              ]
+            },
+            {
+              "effect": "became pregnant",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "cb70bfd3becd",
+                  "text": "Her carbamazepine concentration decreased from 11.8 to 8.5 micrograms/mL; she also became pregnant at that time."
+                }
+              ]
+            },
+            {
+              "effect": "systemic lupus erythematosus",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "e1769f83c07f",
+                  "text": "Carbamazepine-induced systemic lupus erythematosus."
+                }
+              ]
+            },
+            {
+              "effect": "Loss of seizure control",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "f13c85cdf413",
+                  "text": "Loss of seizure control associated with generic substitution of carbamazepine."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        },
+        "ciprofloxacin": {
+          "sentences_read": 11,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "Renal toxicities",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "12e6910b0d0b",
+                  "text": "Renal toxicities have been reported in less than one percent of the patients receiving ciprofloxacin therapy."
+                }
+              ]
+            },
+            {
+              "effect": "Thrombocytosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "2a9a2924114e",
+                  "text": "Thrombocytosis under ciprofloxacin and tazobactam/piperacillin."
+                }
+              ]
+            },
+            {
+              "effect": "epileptogenic property",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "354f33d8713a",
+                  "text": "In addition, there is a report on prolonged ECT seizure related to ciprofloxacin, which has an epileptogenic property with a similar action to beta-lactam antibiotics."
+                }
+              ]
+            },
+            {
+              "effect": "prolonged ECT seizure",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "354f33d8713a",
+                  "text": "In addition, there is a report on prolonged ECT seizure related to ciprofloxacin, which has an epileptogenic property with a similar action to beta-lactam antibiotics."
+                }
+              ]
+            },
+            {
+              "effect": "thrombocyte count",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "3fa3409adc3d",
+                  "text": "Since the thrombocyte count started to increase immediately after initiation and dropped immediately after discontinuation of ciprofloxacin and tazobactam/piperacillin and all other drugs were discontinued already before or were started after the nadir of the thrombocyte count, these two antibiotics were regarded causative."
+                }
+              ]
+            },
+            {
+              "effect": "Stevens-Johnson syndrome",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "45f126f64b91",
+                  "text": "Vanishing bile duct and Stevens-Johnson syndrome associated with ciprofloxacin treated with tacrolimus."
+                }
+              ]
+            },
+            {
+              "effect": "bile duct",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "45f126f64b91",
+                  "text": "Vanishing bile duct and Stevens-Johnson syndrome associated with ciprofloxacin treated with tacrolimus."
+                }
+              ]
+            },
+            {
+              "effect": "seizures",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "headache",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "dizziness",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "hallucinations",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6061de1ce44e",
+                  "text": "Central nervous system effects secondary to ciprofloxacin treatment are uncommon and usually consist only of minor dizziness or mild headache, although rare occurrences of seizures and hallucinations have been reported."
+                }
+              ]
+            },
+            {
+              "effect": "psychosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "62a7a41b8ea0",
+                  "text": "CONCLUSIONS: Caution should be exercised when using ciprofloxacin in the treatment of patients with personality abnormalities or symptoms of psychosis."
+                }
+              ]
+            },
+            {
+              "effect": "personality abnormalities",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "62a7a41b8ea0",
+                  "text": "CONCLUSIONS: Caution should be exercised when using ciprofloxacin in the treatment of patients with personality abnormalities or symptoms of psychosis."
+                }
+              ]
+            },
+            {
+              "effect": "interstitial nephritis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "66000f072481",
+                  "text": "Suspected ciprofloxacin-induced interstitial nephritis."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    },
+    {
+      "id": "q18",
+      "question": "Compare the side effects reported for phenytoin and tamoxifen. Which ones are not on their FDA labels?",
+      "plan": {
+        "drugs": [
+          "phenytoin",
+          "tamoxifen"
+        ],
+        "check_label": false
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 1,
+      "rejected": 3,
+      "seconds": 79.9,
+      "report": {
+        "phenytoin": {
+          "sentences_read": 10,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "IgE",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "19470dc14d8e",
+                  "text": "The IgA was normalized after phenytoin withdrawal, but IgE determination increased progressively without any atopic symptoms."
+                }
+              ]
+            },
+            {
+              "effect": "fever",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "lymphadenopathy",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "rash",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "hypersensitivity reactions",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "277a2cc3a9e5",
+                  "text": "The possibility of phenytoin hypersensitivity reactions should be considered when patients receiving phenytoin have unusual symptoms, particularly fever, rash, and lymphadenopathy."
+                }
+              ]
+            },
+            {
+              "effect": "paradoxical seizures",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "360636ebe581",
+                  "text": "We present three patients with paradoxical seizures; their serum phenytoin levels were 43.5 mcg/mL, 46.5 mcg/mL and 38.3 mcg/mL."
+                }
+              ]
+            },
+            {
+              "effect": "hypersensitivity syndrome",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6cb3d977e6e0",
+                  "text": "Systemic corticosteroids in the phenytoin hypersensitivity syndrome."
+                }
+              ]
+            },
+            {
+              "effect": "Gynecomastia",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "8580d6450663",
+                  "text": "Gynecomastia developed in two epileptic patients some months after the addition of oral fluoresone 750 mg daily to the phenobarbital and phenytoin already being administered."
+                }
+              ]
+            },
+            {
+              "effect": "Valproate levels remained low",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "8929abc3c669",
+                  "text": "Valproate levels remained low because of interactions with phenytoin."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        },
+        "tamoxifen": {
+          "sentences_read": 14,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "ovarian endometrioid carcinoma",
+              "sentences": 2,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "8eb8e9cf9cf4",
+                  "text": "We present the first case of ovarian endometrioid carcinoma and endometriosis in a postmenopausal patient who was treated with tamoxifen for breast cancer."
+                },
+                {
+                  "id": "9671cadedf33",
+                  "text": "Ovarian endometrioid carcinoma and endometriosis developing in a postmenopausal breast cancer patient during tamoxifen therapy: a case report and review of the literature."
+                }
+              ]
+            },
+            {
+              "effect": "endometriosis",
+              "sentences": 2,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "8eb8e9cf9cf4",
+                  "text": "We present the first case of ovarian endometrioid carcinoma and endometriosis in a postmenopausal patient who was treated with tamoxifen for breast cancer."
+                },
+                {
+                  "id": "9671cadedf33",
+                  "text": "Ovarian endometrioid carcinoma and endometriosis developing in a postmenopausal breast cancer patient during tamoxifen therapy: a case report and review of the literature."
+                }
+              ]
+            },
+            {
+              "effect": "Acute abdomen",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "1263e3a2f123",
+                  "text": "Acute abdomen due to endometriosis in a premenopausal woman taking tamoxifen."
+                }
+              ]
+            },
+            {
+              "effect": "intermittent spotting",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "1bdef5c418eb",
+                  "text": "CASES: Two postmenopausal women treated with tamoxifen and progestational agents for breast carcinoma developed uterine enlargement and intermittent spotting."
+                }
+              ]
+            },
+            {
+              "effect": "uterine enlargement",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "1bdef5c418eb",
+                  "text": "CASES: Two postmenopausal women treated with tamoxifen and progestational agents for breast carcinoma developed uterine enlargement and intermittent spotting."
+                }
+              ]
+            },
+            {
+              "effect": "endometrial carcinoma",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "21d1bc4cc005",
+                  "text": "The authors intend to carry out a case-control study on patients treated with tamoxifen for breast carcinoma to reveal the possible presence of endometrial carcinoma."
+                }
+              ]
+            },
+            {
+              "effect": "High-grade endometrial stromal sarcoma",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "7e789e74d69b",
+                  "text": "High-grade endometrial stromal sarcoma after tamoxifen therapy for breast cancer."
+                }
+              ]
+            },
+            {
+              "effect": "endometrial stromal sarcoma",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9084bd4e24a5",
+                  "text": "A case of high-grade endometrial stromal sarcoma, confined into an intrauterine polypoid growth, in a woman with a history of breast cancer who was treated with adjuvant tamoxifen."
+                }
+              ]
+            },
+            {
+              "effect": "intrauterine polypoid growth",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9084bd4e24a5",
+                  "text": "A case of high-grade endometrial stromal sarcoma, confined into an intrauterine polypoid growth, in a woman with a history of breast cancer who was treated with adjuvant tamoxifen."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    },
+    {
+      "id": "q19",
+      "question": "Compare the side effects reported for l asparaginase and insulin. Which ones are not on their FDA labels?",
+      "plan": {
+        "drugs": [
+          "l-asparaginase",
+          "insulin"
+        ],
+        "check_label": false
+      },
+      "planner_valid_json": true,
+      "planner_correct": true,
+      "retries": 0,
+      "rejected": 0,
+      "seconds": 56.2,
+      "report": {
+        "l-asparaginase": {
+          "sentences_read": 10,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "Delayed pseudocyst of the pancreas",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "46348a6807b5",
+                  "text": "Delayed pseudocyst of the pancreas can be a complication of intramuscular L-asparaginase."
+                }
+              ]
+            },
+            {
+              "effect": "pancreatitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "631a0d7f2058",
+                  "text": "L-asparaginase-induced pancreatitis is an uncommon but potential lethal complication of the treatment of leukemia."
+                }
+              ]
+            },
+            {
+              "effect": "cerebral thrombosis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6640e79299ea",
+                  "text": "Children with acute lymphoblastic leukemia (ALL), treated with L-asparaginase are at risk for cerebral thrombosis or hemorrhage because of coagulation protein deficiencies."
+                }
+              ]
+            },
+            {
+              "effect": "hemorrhage",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "6640e79299ea",
+                  "text": "Children with acute lymphoblastic leukemia (ALL), treated with L-asparaginase are at risk for cerebral thrombosis or hemorrhage because of coagulation protein deficiencies."
+                }
+              ]
+            },
+            {
+              "effect": "seizures",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "74599f339bcf",
+                  "text": "We report 3 cases of children with acute lymphoblastic leukemia who developed seizures and altered sensorium after L-asparaginase therapy."
+                }
+              ]
+            },
+            {
+              "effect": "altered sensorium",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "74599f339bcf",
+                  "text": "We report 3 cases of children with acute lymphoblastic leukemia who developed seizures and altered sensorium after L-asparaginase therapy."
+                }
+              ]
+            },
+            {
+              "effect": "severe necrotizing pancreatitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "7849503b034d",
+                  "text": "L-asparaginase-induced severe necrotizing pancreatitis successfully treated with percutaneous drainage."
+                }
+              ]
+            },
+            {
+              "effect": "acute pancreatitis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9b4d9e662efc",
+                  "text": "An adolescent male developed acute pancreatitis and pseudocyst of the pancreas 16 weeks after cessation of intramuscular L-asparaginase."
+                }
+              ]
+            },
+            {
+              "effect": "pseudocyst of the pancreas",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "9b4d9e662efc",
+                  "text": "An adolescent male developed acute pancreatitis and pseudocyst of the pancreas 16 weeks after cessation of intramuscular L-asparaginase."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        },
+        "insulin": {
+          "sentences_read": 19,
+          "label_found": null,
+          "label_set_id": null,
+          "effects": [
+            {
+              "effect": "allergy",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "4f6e2cc21471",
+                  "text": "Protamine allergy as a complication of insulin hypersensitivity: A case report."
+                }
+              ]
+            },
+            {
+              "effect": "hypoglycemic fits",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "5d42c322ba41",
+                  "text": "Surprisingly, insulin therapy had to be suspended because of hypoglycemic fits and treatment with metformin was started."
+                }
+              ]
+            },
+            {
+              "effect": "lipohypertrophy",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "644443e2bbad",
+                  "text": "Insulin-induced lipohypertrophy: report of a case with histopathology."
+                }
+              ]
+            },
+            {
+              "effect": "increased vascular permeability",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "7abb1ecb058e",
+                  "text": "We conjectured that the side effects of insulin, such as anti-natriuresis and increased vascular permeability, might be pronounced in the presence of the hepatic dysfunction that accompanies insulin insensitivity, hyperinsulinaemia and hypoalbuminaemia."
+                }
+              ]
+            },
+            {
+              "effect": "anti-natriuresis",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "7abb1ecb058e",
+                  "text": "We conjectured that the side effects of insulin, such as anti-natriuresis and increased vascular permeability, might be pronounced in the presence of the hepatic dysfunction that accompanies insulin insensitivity, hyperinsulinaemia and hypoalbuminaemia."
+                }
+              ]
+            },
+            {
+              "effect": "dedifferentiation",
+              "sentences": 1,
+              "on_label": null,
+              "evidence": [
+                {
+                  "id": "81dd13f00872",
+                  "text": "CONCLUSIONS: In our reported case, a local hyperproduction of TNF-alpha from macrophages that was induced by the injected insulin could explain the dedifferentiation of the adipocytes of the subcutaneous tissue and the reversion that was induced by the local injection of dexamethasone."
+                }
+              ]
+            }
+          ],
+          "possible_new_signals": []
+        }
+      }
+    }
+  ]
+}
